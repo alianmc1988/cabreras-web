@@ -17,8 +17,8 @@
 
   <div id="last-text">
       <p>UNINDO MERCADOS</p>
-      <button id="b-start" @click="goToAbout()">Começar</button>
-      <button id="b-contact"  @click="goToContact()">Contatar</button>
+      <home-button-ligth :goTourl="abouturl" :name_button="'Começar'" />
+      <home-button-dark :goTourl="contacturl" :name_button="'Contatar'" />
   </div>
   
 </div>
@@ -27,16 +27,21 @@
 
 <script>
 // @ is an alias to /src
-
+import HomeButtonLigth from '../components/buttons/HomeButtons/HomeButtonLigth.vue'
+import HomeButtonDark from '../components/buttons/HomeButtons/HomeButtonDark.vue'
 export default {
   name: 'HomeView',
-  methods: {
-    goToAbout() {
-      this.$router.push('/about')
-    },
-    goToContact() {
-      this.$router.push('/contact-us')
+  data() {
+    return {
+      nav:true,
+      mobileView:false,
+      abouturl: '/about',
+      contacturl: '/contact-us'
     }
+  },
+  components: {
+    HomeButtonDark,
+    HomeButtonLigth
   }
 
 }
@@ -82,46 +87,5 @@ letter-spacing: 1.2625rem;
 }
 
 
-
-#b-start{
-width:12.0625rem;
-height:2.6875rem;
-border-radius: 2rem;
-background: var(--clr-Beige-Light, #F0C986);
-box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(240, 201, 134, 0.24);
-border: 0.125rem solid var(--clr-Beige-Light, #F0C986);
-color: var(--clr-Blue-Light, #113649);
-leading-trim: both;
-text-edge: cap;
-font-family: "Lexend";
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal; 
-margin-top: 1.875rem;
-margin-left: 3.125rem;
-cursor: pointer;
-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-#b-contact{
-background-color:transparent;
-width:12.0625rem;
-height:2.6875rem;
-border-radius: 2rem;
-border: 0.125rem solid var(--clr-Beige-Light, #F0C986);
-box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(240, 201, 134, 0.24);
-backdrop-filter: blur(0.75rem);
-color: var(--clr-Beige-Light, #F0C986);
-leading-trim: both;
-text-edge: cap;
-font-family: "Lexend";
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-cursor: pointer;
-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
 
 </style>
