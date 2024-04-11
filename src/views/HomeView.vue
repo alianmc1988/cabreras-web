@@ -27,8 +27,9 @@
 
 <script>
 // @ is an alias to /src
-import HomeButtonLigth from '../components/buttons/HomeButtons/HomeButtonLigth.vue'
-import HomeButtonDark from '../components/buttons/HomeButtons/HomeButtonDark.vue'
+import HomeButtonLigth from '../components/buttons/HomeButtons/homeButtonLigth.vue'
+import HomeButtonDark from '../components/buttons/HomeButtons/homeButtonDark.vue'
+
 export default {
   name: 'HomeView',
   data() {

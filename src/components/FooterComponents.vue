@@ -15,11 +15,11 @@ export default {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    padding: 5px;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
-    border-top: 4px solid #000;
+    border-top: 2px solid #000;
 }
 </style>
