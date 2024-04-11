@@ -1,6 +1,6 @@
 <template>
-  
-<div class="main-container">
+  <section>
+  <div class="main-container">
   <div id="header-text">
     <p>CABRERAS</p>
   </div> 
@@ -19,9 +19,22 @@
       <p>UNINDO MERCADOS</p>
       <home-button-ligth :goTourl="abouturl" :name_button="'Começar'" />
       <home-button-dark :goTourl="contacturl" :name_button="'Contatar'" />
-  </div>
-  
+  </div>>
 </div>
+<!-- <div>
+  <landing-page-vue />
+</div> -->
+<div>
+  <about />
+</div>
+<div>
+  <servicos-view-vue />
+</div>
+<div>
+  <contact-us />
+</div>
+</section>
+
 </template>
 
 
@@ -29,7 +42,10 @@
 // @ is an alias to /src
 import HomeButtonLigth from '../components/buttons/HomeButtons/homeButtonLigth.vue'
 import HomeButtonDark from '../components/buttons/HomeButtons/homeButtonDark.vue'
-
+import About from '../views/AboutView.vue'
+import ContactUs from '../views/ContactUs.vue'
+import ServicosViewVue from './ServicosView.vue'
+import LandingPageVue from './LandingPage.vue'
 export default {
   name: 'HomeView',
   data() {
@@ -42,7 +58,11 @@ export default {
   },
   components: {
     HomeButtonDark,
-    HomeButtonLigth
+    HomeButtonLigth,
+    About,
+    ContactUs,
+    ServicosViewVue,
+    LandingPageVue
   }
 
 }
@@ -53,8 +73,6 @@ export default {
 
 #header-text{
 color: var(--clr-Beige-Light, #F0C986);
-leading-trim: both;
-text-edge: cap;
 text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.50);
 font-size: 4rem;
 font-style: normal;
@@ -75,8 +93,6 @@ margin-left: 1.875rem;
 width: 35rem;
 margin-top: 1.875rem;
 color: var(--clr-Beige-Light, #F0C986);
-leading-trim: both;
-text-edge: cap;
 text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.50);
 font-family: "Lexend Exa";
 font-size: 1.5rem;
@@ -86,7 +102,5 @@ line-height: normal;
 letter-spacing: 1.2625rem;
 
 }
-
-
 
 </style>

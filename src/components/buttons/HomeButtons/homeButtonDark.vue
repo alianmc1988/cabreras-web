@@ -23,6 +23,18 @@ methods: {
     goTo() {
       this.$router.push(this.goTourl)
     }
+  },
+  scrollBehavior(to, from, savedPosition) {
+    // Si la ruta de destino tiene un fragmento (por ejemplo, #servicos)
+    if (to.hash) {
+      return {
+        el: to.hash, // El elemento al que queremos desplazarnos
+        behavior: 'smooth' // Desplazamiento suave
+      }
+    } else {
+      // De lo contrario, desplazarse al inicio de la página
+      return { top: 0, behavior: 'smooth' }
+    }
   }
 }
 </script>
