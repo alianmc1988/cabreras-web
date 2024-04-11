@@ -1,5 +1,5 @@
 <template>
-
+<body>
 <div class="main-container">
   <div id="header-text">
     <p>CABRERAS</p>
@@ -17,21 +17,24 @@
 
   <div id="last-text">
       <p>UNINDO MERCADOS</p>
-        <home-button-ligth :goTourl="abouturl" :name_button="'Começar'" />
-        <home-button-dark :goTourl="contacturl" :name_button="'Contatar'" />
+      <home-button-ligth :goTourl="abouturl" :name_button="'Começar'" />
+      <home-button-dark :goTourl="contacturl" :name_button="'Contatar'" />
   </div>
 </div>
+</body>
 </template>
 
 <script>
-
-import HomeButtonLigth from '../components/buttons/HomeButtons/homeButtonLigth.vue'
-import HomeButtonDark from '../components/buttons/HomeButtons/homeButtonDark.vue'
+import HomeButtonLigth from '@/components/buttons/HomeButtons/homeButtonLigth.vue'
+import HomeButtonDark from '@/components/buttons/HomeButtons/homeButtonDark.vue'
+import inputForm from '@/components/basicComponents/inputForm.vue'  
 export default {
+  components: { inputForm },
     name: 'LandingPageVue',
     componets: {
+        HomeButtonDark,
         HomeButtonLigth,
-        HomeButtonDark
+        inputForm
     },
     data() {
         return {

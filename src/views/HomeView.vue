@@ -40,10 +40,10 @@
 
 <script>
 // @ is an alias to /src
-import HomeButtonLigth from '../components/buttons/HomeButtons/homeButtonLigth.vue'
-import HomeButtonDark from '../components/buttons/HomeButtons/homeButtonDark.vue'
-import About from '../views/AboutView.vue'
-import ContactUs from '../views/ContactUs.vue'
+import HomeButtonLigth from '@/components/buttons/HomeButtons/homeButtonLigth.vue'
+import HomeButtonDark from '@/components/buttons/HomeButtons/homeButtonDark.vue'
+import About from './AboutView.vue'
+import ContactUs from './ContactUs.vue'
 import ServicosViewVue from './ServicosView.vue'
 import LandingPageVue from './LandingPage.vue'
 export default {
@@ -62,45 +62,12 @@ export default {
     About,
     ContactUs,
     ServicosViewVue,
-    LandingPageVue
-  }
+    LandingPageVue}
 
 }
 </script>
 
 <style scoped>
 
-
-#header-text{
-color: var(--clr-Beige-Light, #F0C986);
-text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.50);
-font-size: 4rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 1.505rem;
-}
-
-
-#lines{
-width: 28.75rem;
-display: flex;  
-justify-content: space-between;
-margin-left: 1.875rem;  
-}
-
-#last-text{
-width: 35rem;
-margin-top: 1.875rem;
-color: var(--clr-Beige-Light, #F0C986);
-text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.50);
-font-family: "Lexend Exa";
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 1.2625rem;
-
-}
 
 </style>
