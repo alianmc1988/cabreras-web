@@ -17,20 +17,20 @@
 
   <div id="last-text">
       <p>UNINDO MERCADOS</p>
-      <home-button-ligth :goTourl="abouturl" :name_button="'Começar'" />
-      <home-button-dark :goTourl="contacturl" :name_button="'Contatar'" />
+      <home-button-ligth @buttonStart="gotoStart" :name_button="'Começar'" />
+      <home-button-dark @buttonContact="gotoContact" :name_button="'Contatar'" />
   </div>>
 </div>
 <!-- <div>
   <landing-page-vue />
 </div> -->
-<div>
+<div ref="aboutref">
   <about />
 </div>
 <div>
   <servicos-view-vue />
 </div>
-<div>
+<div ref="contactref">
   <contact-us />
 </div>
 </section>
@@ -62,7 +62,15 @@ export default {
     About,
     ContactUs,
     ServicosViewVue,
-    LandingPageVue}
+    LandingPageVue},
+  methods: {
+    gotoStart(){
+      this.$refs.aboutref.scrollIntoView({ behavior: 'smooth' });
+    },
+    gotoContact(){
+      this.$refs.contactref.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 }
 </script>
