@@ -21,7 +21,7 @@ export default {
 },
 methods: {
     goTo() {
-      this.$router.push(this.goTourl)
+      this.$emit('buttonStart')
     }
   }
 }
