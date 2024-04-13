@@ -1,15 +1,18 @@
 <template>
 	<div class="quem-somos">
-		<p id="first-text-box1">Quem somos?</p>
+		<div class="container">
+			<p id="first-text-box1">Quem somos?</p>
 
-		<div id="box1" class="row">
-			<who-we-are
-                v-for="(image, index) in getImagesData()"
-                :key="index"
-                :src="image.url_image"
-                :description= image.paragraph />
+			<div id="box1" class="row">
+				<who-we-are
+					v-for="(image, index) in getImagesData()"
+					:key="index"
+					:src="image.url_image"
+					:description="image.paragraph"
+				/>
+			</div>
 		</div>
-    </div>
+	</div>
 </template>
 
 <script>
@@ -17,29 +20,28 @@ import { imagesData } from '../data/imagesData.js'
 import WhoWeAre from '../../src/components/whoWeAre/whoWeAre.vue'
 export default {
 	name: 'AboutView',
-    components: {
-        WhoWeAre,
-    },
-    data() {
-        return {
-            imagesData: imagesData,
-        }
-    },
-    methods:{
-        getImagesData(){
-            return this.imagesData
-        },
-        imagesNames(){
-            return this.imagesData.map((image) => image.name)
-        },
-        imagesUrls(){
-            return this.imagesData.map((image) => image.url_image)
-        },
-        imagesDescriptions(){
-            return this.imagesData.map((image) => image.description)
-        },
-    }
-
+	components: {
+		WhoWeAre,
+	},
+	data() {
+		return {
+			imagesData: imagesData,
+		}
+	},
+	methods: {
+		getImagesData() {
+			return this.imagesData
+		},
+		imagesNames() {
+			return this.imagesData.map((image) => image.name)
+		},
+		imagesUrls() {
+			return this.imagesData.map((image) => image.url_image)
+		},
+		imagesDescriptions() {
+			return this.imagesData.map((image) => image.description)
+		},
+	},
 }
 </script>
 
@@ -148,6 +150,7 @@ nav ul li a::after {
 	display: flex;
 	flex-direction: column;
 	align-content: center;
+	align-items: center;
 	padding-bottom: 3.125rem;
 }
 
