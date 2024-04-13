@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { imagesData } from '../data/imagesData.js'
+import { Data } from '../data/imagesData.js'
 import WhoWeAre from '../../src/components/whoWeAre/whoWeAre.vue'
 export default {
 	name: 'AboutView',
@@ -22,21 +22,21 @@ export default {
     },
     data() {
         return {
-            imagesData: imagesData,
+            Data: Data,
         }
     },
     methods:{
         getImagesData(){
-            return this.imagesData
+            return this.Data.images
         },
         imagesNames(){
-            return this.imagesData.map((image) => image.name)
+            return this.Data.image.map((image) => image.name)
         },
         imagesUrls(){
-            return this.imagesData.map((image) => image.url_image)
+            return this.Data.images.map((image) => image.url_image)
         },
         imagesDescriptions(){
-            return this.imagesData.map((image) => image.description)
+            return this.Data.images.map((image) => image.description)
         },
     }
 

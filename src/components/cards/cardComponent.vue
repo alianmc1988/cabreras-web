@@ -1,6 +1,6 @@
 <template>
-    <div class="card">
-      <img :src="'img/Background_Hero.png'" alt="Card Image" />
+    <div class card>
+	<img :src="src" class="card-image" />
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
     </div>

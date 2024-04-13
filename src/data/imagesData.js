@@ -1,4 +1,5 @@
-export const imagesData = [
+export const Data = 
+	{images:[
 	{
 		name: 'QSoomos_1',
 		url_image: 'img/QSoomos_1.webp',
@@ -16,5 +17,5 @@ export const imagesData = [
 		url_image: 'img/QSoomos_3.jpg',
 		paragraph:
 			'Nosso modelo de negócio se baseia em criar conexões que proporcionem benefícios significativos para todas as partes envolvidas.',
-	},
-]
+	},]
+}

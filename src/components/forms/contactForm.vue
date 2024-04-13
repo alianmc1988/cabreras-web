@@ -47,6 +47,17 @@ export default {
             console.log(this.name)
             console.log(this.email)
             console.log(this.message)
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: this.name, email: this.email, message: this.message })
+            };
+
+
+
+            fetch('http://127.0.0.1:8000/api/v0.0.1/cabreras/contacts', requestOptions)
+            .then(response => response.json())
+            .then(data => console.log(data));
         }
     }
 
