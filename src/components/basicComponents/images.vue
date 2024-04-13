@@ -1,17 +1,17 @@
 <template>
-  <img src="{{url_image}}" alt="{{description}}" id="{{id}}">
+  <img :src="src" :alt="alt" :id="id">
 </template>
 
 <script>
 export default {
   name: 'Image',
   props: {
-    url_image:{
+    src:{
         type: String,
         default: "No_image"},
-    description:{
+    alt:{
         type: String,
-        default: "No_description"},
+        default: "No_alt"},
     
     id:{
         type: String,
@@ -29,5 +29,9 @@ export default {
 </script>
 
 <style>
+img{
+    width: 100%;
+    height: 100px;
+}
 
 </style>

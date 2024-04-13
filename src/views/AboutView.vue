@@ -2,49 +2,44 @@
 	<div class="quem-somos">
 		<p id="first-text-box1">Quem somos?</p>
 
-		<div id="box1">
-			<img src="../../public/img/QSoomos_1.webp" alt="two hands" id="photo1" />
-			<div class="text-box1">
-				<div id="paragraphs_box1">
-					<br />
-					<p id="second-text-box1">
-						CABRERAS é uma empresa de comércio eletrônico que conecta
-						exportadores brasileiros com importadores internacionais.
-					</p>
-				</div>
-			</div>
+		<div id="box1" class="row">
+			<who-we-are
+                v-for="(image, index) in getImagesData()"
+                :key="index"
+                :src="image.url_image"
+                :description= image.paragraph />
 		</div>
-
-		<div id="box2">
-			<div id="paragraphs_box2">
-				<p class="text-box2">
-					Atuamos como intermediário eficiente e confiável, facilitando a
-					conexão entre exportadores brasileiros e clientes estrangeiros.
-				</p>
-			</div>
-			<img src="../../public/img/QSoomos_2.jpg" alt="two hands" id="photo2" />
-		</div>
-
-		<div id="box3">
-			<img
-				src="../../public/img/QSoomos_3.jpg"
-				alt="a ship with containers"
-				id="photo3"
-			/>
-			<div id="paragraphs_box2">
-				<p class="text-box3">
-					Nosso modelo de negócio se baseia em criar conexões que proporcionem
-					benefícios significativos para todas as partes envolvidas.
-				</p>
-			</div>
-		</div>
-	</div>
+    </div>
 </template>
 
 <script>
 import { imagesData } from '../data/imagesData.js'
+import WhoWeAre from '../../src/components/whoWeAre/whoWeAre.vue'
 export default {
 	name: 'AboutView',
+    components: {
+        WhoWeAre,
+    },
+    data() {
+        return {
+            imagesData: imagesData,
+        }
+    },
+    methods:{
+        getImagesData(){
+            return this.imagesData
+        },
+        imagesNames(){
+            return this.imagesData.map((image) => image.name)
+        },
+        imagesUrls(){
+            return this.imagesData.map((image) => image.url_image)
+        },
+        imagesDescriptions(){
+            return this.imagesData.map((image) => image.description)
+        },
+    }
+
 }
 </script>
 

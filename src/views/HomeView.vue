@@ -33,6 +33,8 @@
 <div ref="contactref">
   <contact-us />
 </div>
+
+
 </section>
 
 </template>
@@ -46,23 +48,35 @@ import About from './AboutView.vue'
 import ContactUs from './ContactUs.vue'
 import ServicosViewVue from './ServicosView.vue'
 import LandingPageVue from './LandingPage.vue'
+import WhoWeAre from '@/components/whoWeAre/whoWeAre.vue'
+import cardComponents from '@/components/cards/cardComponent.vue'
+
 export default {
   name: 'HomeView',
   data() {
-    return {
+    return {      
+      card: {
+        imageUrl: '../../public/img/Background_Hero.png',
+        title: 'Título de la tarjeta',
+        description: 'Descripción de la tarjeta'
+      },
       nav:true,
       mobileView:false,
       abouturl: '/about',
-      contacturl: '/contact-us'
+      contacturl: '/contact-us',
+      url_image: '../../public/img/Background_Hero.png',
     }
   },
   components: {
+    cardComponents,
     HomeButtonDark,
     HomeButtonLigth,
     About,
     ContactUs,
     ServicosViewVue,
-    LandingPageVue},
+    WhoWeAre,
+    LandingPageVue,
+    },
   methods: {
     gotoStart(){
       this.$refs.aboutref.scrollIntoView({ behavior: 'smooth' });
