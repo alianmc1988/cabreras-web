@@ -55,7 +55,7 @@ export default {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background-image: url(../public/img/Background_Hero.png);
+	background-image: url(../public/img/rezised/Backgroundmin_Hero.png);
 	background-size: cover;
 }
 
