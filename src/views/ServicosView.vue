@@ -1,47 +1,32 @@
 <template>
   <div class="que-oferecemos">
         <p id="first-text-section3">Que oferecemos?</p>
-        <div id="firstbox-3imags-section3">
-            <div id="firstdiv-section3">
-                <img src="../../public/img/QOfrecemos_1.jpg" alt="ship with containers" id="photo1-section3">
-                <p id="text1-firstdiv-s3">Acesso a mercados</p>
-                <p id="text2-firstdiv-s3">Estendemos o alcance dos exportadores, permitindo-lhes acessar os mercados do Panamá, Cuba e outros países do Caribe em particular, diversificando suas fontes de renda.</p>
-            </div>
-            <div id="seconddiv-section3">
-                <img src="../../public/img/QOfrecemos_2.jpg" alt="PC" id="photo2-section3">
-                <p id="text1-seconddiv-s3">Eficiência operacional</p>
-                <p id="text2-seconddiv-s3">Reduzimos a complexidade do processo de exportação oferecendo uma plataforma centralizada para todas as etapas, desde a negociação até a entrega.</p>
-            </div>
-            <div id="thirddiv-section3">
-                <img src="../../public/img/QOfrecemos_3.jpg" alt="warehouse" id="photo3-section3">
-                <p id="text1-thirddiv-s3">Variedade de produtos</p>
-                <p id="text2-thirddiv-s3">Oferecemos acesso a uma ampla gama de produtos alimentícios de alta qualidade provenientes do Brasil, permitindo aos importadores diversificar sua carteira.</p>
-            </div>
-        </div>
-        <div id="secondbox-3imags-section3">
-            <div id="fourthdiv-section3">
-                <img src="../../public/img/QOfrecemos_4.jpg" alt="hands, computer and notebook" id="photo4-section3">
-                <p id="text1-fourthdiv-s3">Segurança e transparência</p>
-                <p id="text2-fourthdiv-s3">Garantimos a transparência nas negociações, assegurando a qualidade dos produtos e a segurança nas transações financeiras.</p>
-            </div>
-            <div id="fifthdiv-section3">
-                <img src="../../public/img/QOfrecemos_5.jpg" alt="notebook" id="photo5-section3">
-                <p id="text1-fifthdiv-s3">Redução de custos</p>
-                <p id="text2-fifthdiv-s3">Ao otimizar o processo de exportação, reduzimos os custos operacionais para ambas as partes, tornando o comércio internacional mais acessível e eficiente.</p>
-            </div>
-            <div id="sixthdiv-section3">
-                <img src="../../public/img/QOfrecemos_6.jpg" alt="warehouse" id="photo6-section3">
-                <p id="text1-sixthdiv-s3">Cumprimento de normas</p>
-                <p id="text2-sixthdiv-s3">Facilitamos o cumprimento das normas de comércio internacional, proporcionando uma experiência segura e legal tanto para exportadores quanto para importadores.</p>
-            </div>
-        </div>
-       
+  <div>
+    <div id="box1" class="d-grid">
+			<card-component
+                v-for="(image, index) in servicos"
+                :key="index"
+                :title="image.title"
+                :imageUrl="image.url_image"
+                :description= image.paragraph />
+		</div>
+    </div> 
     </div>
 </template>
 
 <script>
+import { Data } from '../data/imagesData.js'
+import cardComponent from '@/components/cards/cardComponent.vue';
 export default {
-    name: 'ServicosView'
+    name: 'ServicosView',
+    components: {
+        cardComponent
+    },
+    data() {
+        return {
+            servicos: Data.services
+        }
+    }
 }
 </script>
 

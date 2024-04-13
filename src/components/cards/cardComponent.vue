@@ -1,6 +1,6 @@
 <template>
-    <div class card>
-	<img :src="src" class="card-image" />
+    <div class = "card">
+	<img :src="imageUrl"/>
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
     </div>
@@ -37,6 +37,7 @@
   img {
     width: 100%;
     border-radius: 4px;
+
   }
   
   h2 {
