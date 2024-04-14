@@ -1,8 +1,10 @@
 <template>
-	<div class="card">
-		<img :src="imageUrl" />
-		<h2>{{ title }}</h2>
-		<p>{{ description }}</p>
+	<div class="col md-row">
+		<div class="card">
+			<img :src="imageUrl" />
+			<h2>{{ title }}</h2>
+			<p>{{ description }}</p>
+		</div>
 	</div>
 </template>
 
