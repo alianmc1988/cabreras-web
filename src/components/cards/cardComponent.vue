@@ -1,9 +1,11 @@
 <template>
-	<div class="col md-row">
-		<div class="card">
+	<div class="col md-row px-5">
+		<div class="card h-3">
 			<img :src="imageUrl" />
 			<h2>{{ title }}</h2>
-			<p>{{ description }}</p>
+			<div class="container overflow-scroll">
+				<p>{{ description }}</p>
+			</div>
 		</div>
 	</div>
 </template>
@@ -33,12 +35,14 @@ export default {
 	border-radius: 8px;
 	padding: 20px;
 	margin: 10px;
-	width: 300px;
+	width: 500px;
+	height: 600px;
 }
 
 img {
 	width: 100%;
 	border-radius: 4px;
+	height: 20rem;
 }
 
 h2 {
@@ -48,5 +52,6 @@ h2 {
 
 p {
 	margin-top: 10px;
+	font-size: 1.5em;
 }
 </style>
