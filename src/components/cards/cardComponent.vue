@@ -1,6 +1,6 @@
 <template>
 	<div class="card">
-		<img :src="'img/rezised/Backgroundmin_Hero.png'" alt="Card Image" />
+		<img :src="imageUrl" />
 		<h2>{{ title }}</h2>
 		<p>{{ description }}</p>
 	</div>
