@@ -6,6 +6,7 @@
 			<div id="box1" class="row">
 				<who-we-are
 					v-for="(image, index) in getImagesData()"
+					:is_par="index % 2 === 0"
 					:key="index"
 					:src="image.url_image"
 					:description="image.paragraph"
@@ -46,102 +47,7 @@ export default {
 </script>
 
 <style scoped>
-* {
-	margin: 0;
-	padding: 0;
-	font-family: 'Lexend', sans-serif;
-	box-sizing: border-box;
-}
-.first-section {
-	width: 100%;
-	height: 58.75rem;
-	flex-shrink: 0;
-	background-size: cover;
-	background-position: center;
-}
 
-.logo {
-	width: 2.0661rem;
-	height: 1.7432rem;
-	flex-shrink: 0;
-	margin-left: 10.7081rem;
-}
-
-.logo-site {
-	margin-right: 10rem;
-}
-
-nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-
-nav ul li {
-	display: inline-block;
-	list-style: none;
-	margin: 1.4763rem 4.6875rem;
-}
-
-nav ul li a {
-	color: var(--clr-Beige-Light, #f0c986);
-	leading-trim: both;
-	text-edge: cap;
-	font-family: Lexend;
-	font-size: 1rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	text-decoration: none;
-}
-
-nav ul li a::after {
-	content: '';
-	width: 0%;
-	height: 0.1875rem;
-	background: #ff004f;
-	position: absolute;
-	left: 0;
-	bottom: -0.375rem;
-	transition: 0.5s;
-}
-
-.header-text {
-	margin: 18.75rem 48.1875rem 30.25rem 10.625rem;
-	color: var(--clr-Beige-Light, #f0c986);
-	leading-trim: both;
-	text-edge: cap;
-	text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.5);
-	font-family: 'Lexend Exa';
-	font-size: 4rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: 1.505rem;
-}
-
-#lines {
-	width: 28.75rem;
-	display: flex;
-	justify-content: space-between;
-	margin-left: 1.875rem;
-}
-
-#last-text {
-	width: 35rem;
-	margin-top: 1.875rem;
-	color: var(--clr-Beige-Light, #f0c986);
-	leading-trim: both;
-	text-edge: cap;
-	text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.5);
-	font-family: 'Lexend Exa';
-	font-size: 1.5rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: 1.2625rem;
-}
 
 .quem-somos {
 	width: 100%;
@@ -156,7 +62,7 @@ nav ul li a::after {
 
 #box1 {
 	display: flex;
-	flex-direction: row;
+	flex-direction:column;
 	align-items: center;
 }
 

@@ -1,14 +1,26 @@
 <template>
-	<div class="col md-row card-container">
-		<div class="image-container">
-			<div class="card">
+	<section>
+
+	<div v-show="!is_par" class="col md-row card-container" >
+		<div class="text-container">
+			<p class="card-description">{{ description }}</p>
+		</div>
+			<div class="card-image">
+				<img :src="src" class="card-image2" />
+		</div>
+	</div>
+
+
+
+	<div v-show="is_par" class="col md-row card-container">
+			<div class="card-image">
 				<img :src="src" class="card-image" />
 			</div>
-		</div>
 		<div class="text-container">
 			<p class="card-description">{{ description }}</p>
 		</div>
 	</div>
+</section>
 </template>
 
 <script>
@@ -22,6 +34,10 @@ export default {
 			type: String,
 			required: true,
 		},
+		is_par: {
+			type: Boolean,
+			required: true,
+		},
 	},
 }
 </script>
@@ -33,23 +49,35 @@ export default {
 }
 
 .image-container {
-	flex: 0 0 auto; /* Establece el tamaño fijo para el contenedor de la imagen */
-	margin-right: 20px; /* Espacio entre la imagen y el texto */
+	display:flex;
+	width: 500; /* Tamaño de la imagen (ajústalo según sea necesario) */
+
 }
 
 .card-image {
-	width: 100px; /* Tamaño de la imagen (ajústalo según sea necesario) */
+	width: 100%; /* Tamaño de la imagen (ajústalo según sea necesario) */
 	height: auto; /* Altura automática para mantener la proporción */
-	border-radius: 5px; /* Borde redondeado para la imagen */
+	border-radius: 0rem 4.5rem 0rem 0rem;
 }
 
 .text-container {
-	flex: 1; /* El texto ocupa el espacio restante disponible */
+	display:flex;
+	padding: 3rem;
+ /* El texto ocupa el espacio restante disponible */
 }
 
 .card-description {
-	margin: 0; /* Elimina el margen predeterminado del párrafo */
-	font-size: 14px; /* Tamaño de fuente del texto */
-	color: var(--clr-Beige-Light, #f0c986);
+font-family: "Lexend Exa";
+color: var(--clr-Beige-Medium, #C19B64);
+font-size: 1.625rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.card-image2 {
+	width: 100%; /* Tamaño de la imagen (ajústalo según sea necesario) */
+	height: auto; /* Altura automática para mantener la proporción */
+	border-radius: 4.5rem 0rem 0rem 0rem;
 }
 </style>
