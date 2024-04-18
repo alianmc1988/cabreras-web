@@ -1,16 +1,21 @@
 <template>
+	<!-- working here -->
 	<section class="contate-nos-section4">
-		<div class="contate-nos">
-			<div>
+		<div class="container py-5 d-md-flex">
+			<div class="contact-container my-5 container">
 				<div id="info-required">
 					<p id="contact-us">Contate-nos</p>
 					<cabrera-logo-text-vue />
 					<contact-form />
 				</div>
 			</div>
-			<qr-code />
+			<div class="qrcode container">
+				<qr-code />
+			</div>
 		</div>
-		<privacy-politics />
+		<div class="container">
+			<privacy-politics />
+		</div>
 	</section>
 </template>
 
@@ -67,5 +72,12 @@ export default {
 	line-height: normal;
 	letter-spacing: 0.075rem;
 	margin-bottom: 1.25rem;
+}
+
+.qrcode {
+	align-items: center;
+}
+
+.contact-container {
 }
 </style>
