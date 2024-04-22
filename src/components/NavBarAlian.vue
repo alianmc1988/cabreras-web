@@ -6,7 +6,11 @@
                 <h5>Menu</h5>
             </div>
             <ul class="navbar-nav">
-
+                <li class="nav-item active">
+                <router-link to="/" id="logo-url">
+                <img alt="Vue logo" src="../../public/img/Logo-Beage (1).png" id="logo-url">
+                </router-link> 
+                </li>
 
                 <li class="nav-item active">
                     <router-link class="nav-link active" to="/">Home</router-link> 
@@ -52,16 +56,16 @@
             </div>
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <router-link class="nav-link" to="/">Home</router-link> 
+                    <router-link class="nav-link active" to="/">Home</router-link> 
                 </li>
-                <li class="nav-item active">
-                    <router-link class="nav-link" to="/servicos">Services</router-link>
+                <li class="nav-item">
+                    <router-link class="nav-link active" to="/servicos">Services</router-link>
                 </li>
-                <li class="nav-item active">
-                    <router-link class="nav-link" to="/about">About</router-link>
+                <li class="nav-item">
+                    <router-link class="nav-link active" to="/about">About</router-link>
                 </li>
-                <li class="nav-item active">
-                    <router-link class="nav-link" to="/contact-us">Contact Us</router-link>
+                <li class="nav-item">
+                    <router-link class="nav-link active" to="/contact-us">Contact Us</router-link>
                 </li>
             </ul>
             <div class="menu  mt-4">
@@ -71,16 +75,16 @@
                 <li class="nav-item active">
                     <a class="nav-link active" aria-current="page" href="https://www.facebook.com/alian.medinascabrera" target="blank">Facebook</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="https://www.instagram.com/medinascabrera/" target="blank">Instagram</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="https://twitter.com/AmcAlian" target="blank">Tweeter</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="https://www.linkedin.com/in/alian-medina-7a14101a9/" target="blank">Linkedin</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="https://github.com/alianmc1988" target="blank">GitHub</a>
                 </li>
             </ul>
@@ -90,26 +94,26 @@
     <!-- Fin barra nav cell spanish -->
     
     <!-- barra nav PC English -->
-    <!-- <nav ngIf="languaje == 'en'" class="navbar d-md-flex navbar-expand-md navbar-dark bg-dark banner">
+    <nav ngIf="languaje == 'en'" class="navbar d-md-flex navbar-expand-md navbar-dark bg-dark banner">
         <div class="container long">
             <div class="navbar-toggler-icon d-md-none"></div>
-     -->
+    
             <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button> -->
     
-            <!-- <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
                 <ul class="navbar-nav">
                 <li class="nav-item active">
                     <router-link class="nav-link active" to="/">Home</router-link> 
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <router-link class="nav-link active" to="/servicos">Services</router-link>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <router-link class="nav-link active" to="/about">About</router-link>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <router-link class="nav-link active" to="/contact-us">Contact Us</router-link>
                 </li>
             </ul>
@@ -119,7 +123,7 @@
     
     
     </nav>
-    Fin barra nav PC English -->
+    <!-- Fin barra nav PC English -->
     
     <!-- Barra nav PC Spanish -->
     <nav ngIf="languaje == 'es'" class="navbar d-md-flex navbar-expand-md navbar-dark bg-dark banner">
@@ -131,13 +135,13 @@
                 <li class="nav-item active">
                     <router-link class="nav-link active" to="/">Home</router-link> 
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <router-link class="nav-link active" to="/servicos">Services</router-link>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <router-link class="nav-link active" to="/about">About</router-link>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <router-link class="nav-link active" to="/contact-us">Contact Us</router-link>
                 </li>
             </ul>

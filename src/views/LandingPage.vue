@@ -1,5 +1,4 @@
-<template>
-<body>
+<!-- <template>
 <div class="main-container">
   <div id="header-text">
     <p>CABRERAS</p>
@@ -18,10 +17,10 @@
   <div id="last-text">
       <p>UNINDO MERCADOS</p>
       <home-button-ligth :goTourl="abouturl" :name_button="'Começar'" />
+
       <home-button-dark :goTourl="contacturl" :name_button="'Contatar'" />
   </div>
 </div>
-</body>
 </template>
 
 <script>
@@ -50,12 +49,18 @@ export default {
 
 
 <style>
+
+.medio{
+display: flex;
+align-items: start;
+}
+
 #header-text{
 color: var(--clr-Beige-Light, #F0C986);
 text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.50);
-font-size: 4rem;
+font-size: 200%;
 font-style: normal;
-font-weight: 400;
+font-weight: 800%;
 line-height: normal;
 letter-spacing: 1.505rem;
 }
@@ -69,7 +74,7 @@ margin-left: 1.875rem;
 
 #last-text{
 width: 35rem;
-margin-top: 1.875rem;
+margin: 10px;
 color: var(--clr-Beige-Light, #F0C986);
 text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.50);
 font-family: "Lexend Exa";
@@ -79,4 +84,4 @@ font-weight: 400;
 line-height: normal;
 letter-spacing: 1.2625rem;
 }
-</style>
+</style> -->

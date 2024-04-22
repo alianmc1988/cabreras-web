@@ -27,7 +27,7 @@ export default {
 <style>
 #message-input{
   
-  width: 28.625rem;
+  width: 100%;
   height: 5.375rem;
   padding: 1.0656rem 1.7049rem;
   flex-shrink: 0;

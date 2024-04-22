@@ -25,8 +25,8 @@ display: flex;
   
 }
 #introduction{
-width: 23.875rem;
-height: 5.1875rem;
+width: 75%;
+height: 100%;
 flex-shrink: 0;
 border-radius: 0.25rem;
 border: 0.0625rem solid var(--clr-Beige-Light, #F0C986);

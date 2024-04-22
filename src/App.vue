@@ -1,9 +1,7 @@
 <template>
 	<div id="app">
-		<div id="nav-icon" v-if="mobileView">
-			<i class="fas fa-bars"></i>
-		</div>
-		<NavBar v-if="!mobileView" />
+
+		<NavBar/>
 		<router-view />
 		<footer-components />
 	</div>
@@ -57,6 +55,7 @@ export default {
 	height: 100vh;
 	background-image: url(../public/img/rezised/Backgroundmin_Hero.png);
 	background-size: cover;
+	min-width: 360px;
 }
 
 h1 {

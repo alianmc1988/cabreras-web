@@ -1,7 +1,7 @@
 <template>
 	<div class="col md-row px-5">
 		<div class="card h-3">
-			<img :src="imageUrl" />
+			<img :src="imageUrl" class="img"/>
 			<h2>{{ title }}</h2>
 			<div class="container overflow-scroll">
 				<p>{{ description }}</p>
@@ -35,15 +35,15 @@ export default {
 	border-radius: 8px;
 	padding: 20px;
 	margin: 10px;
-	width: 500px;
-	height: 600px;
+	max-width: 50vh;
+	min-width: 35vh;
+	height: 650px;
 }
 
-img {
+.img {
 	width: 100%;
-  height: 40%;
+  	height: 40%;
 	border-radius: 4px;
-	height: 20rem;
 }
 
 h2 {

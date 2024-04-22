@@ -44,7 +44,7 @@
     }
     
     #name-input{
-    width: 28.625rem;
+    width: 100%;
     padding: 1.0656rem 1.7049rem;   
     border-radius: 0.3197rem;
     border: 0.0532rem solid var(--clr-Beige-Light, #F0C986);

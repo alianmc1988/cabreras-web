@@ -39,12 +39,13 @@
 			<div id="last-text">
 				<p>UNINDO MERCADOS</p>
 				<home-button-ligth @buttonStart="gotoStart" :name_button="'Começar'" />
+				|
 				<home-button-dark
 					@buttonContact="gotoContact"
 					:name_button="'Contatar'"
 				/>
 			</div>
-			>
+			
 		</div>
 		<!-- <div>
   <landing-page-vue />
@@ -68,7 +69,6 @@ import HomeButtonDark from '@/components/buttons/HomeButtons/homeButtonDark.vue'
 import About from './AboutView.vue'
 import ContactUs from './ContactUs.vue'
 import ServicosViewVue from './ServicosView.vue'
-import LandingPageVue from './LandingPage.vue'
 import WhoWeAre from '@/components/whoWeAre/whoWeAre.vue'
 import cardComponents from '@/components/cards/cardComponent.vue'
 
@@ -96,7 +96,6 @@ export default {
 		ContactUs,
 		ServicosViewVue,
 		WhoWeAre,
-		LandingPageVue,
 	},
 	methods: {
 		gotoStart() {
@@ -109,4 +108,41 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style>
+
+.medio{
+display: flex;
+align-items: start;
+}
+
+#header-text{
+color: var(--clr-Beige-Light, #F0C986);
+text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.50);
+font-size: 200%;
+font-style: normal;
+font-weight: 800%;
+line-height: normal;
+letter-spacing: 1.505rem;
+}
+
+#lines{
+width: 28.75rem;
+display: flex;  
+justify-content: space-between;
+margin-left: 1.875rem;  
+}
+
+#last-text{
+width: 35rem;
+margin: 10px;
+color: var(--clr-Beige-Light, #F0C986);
+text-shadow: 0rem 0.125rem 0.25rem rgba(6, 35, 49, 0.50);
+font-family: "Lexend Exa";
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.2625rem;
+}
+</style>
+

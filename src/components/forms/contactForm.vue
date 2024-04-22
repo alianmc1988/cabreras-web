@@ -155,8 +155,6 @@ margin-top: 0.9375rem;
 }
 #cabreras-section4{
 color: var(--colorSec-BeigeLig, #F0C986);
-leading-trim: both;
-text-edge: cap;
 /* Shadow/BlueDark/50% */
 text-shadow: 0rem 0.25rem 0.25rem rgba(6, 35, 49, 0.50);
 font-family: "Lexend Exa";
@@ -169,8 +167,7 @@ letter-spacing: 0.36rem;
 
 #unindo-mercados-section4{
 color: var(--colorSec-BeigeLig, #F0C986);
-leading-trim: both;
-text-edge: cap;
+
 /* Shadow/BlueDark/50% */
 text-shadow: 0rem 0.25rem 0.25rem rgba(6, 35, 49, 0.50);
 font-family: "Lexend Exa";
