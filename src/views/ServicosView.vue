@@ -43,7 +43,7 @@ export default {
 	align-items: center;
 	justify-content: space-between;
 	padding-bottom: 3.125rem;
-	min-width: 360px;
+	min-width: 550px;
 
 }
 .r {

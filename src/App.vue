@@ -23,7 +23,6 @@ export default {
 		handleResize() {
 			// Esta función se ejecutará cada vez que la ventana se redimensione
 			this.mobileView = window.innerWidth <= 768
-			console.log('La ventana ha sido redimensionada')
 		},
 	},
 	components: {
@@ -55,7 +54,7 @@ export default {
 	height: 100vh;
 	background-image: url(../public/img/rezised/Backgroundmin_Hero.png);
 	background-size: cover;
-	min-width: 360px;
+	min-width: 550px;
 }
 
 h1 {

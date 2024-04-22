@@ -53,7 +53,7 @@ export default {
 			lightgray -64.914px -60px / 109.505% 114.909% no-repeat;
 	background-size: cover;
 	background-position: center;
-	min-width: 360px;
+	min-width: 550px;
 
 }
 .contate-nos {

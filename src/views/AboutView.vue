@@ -58,7 +58,7 @@ export default {
 	align-content: center;
 	align-items: center;
 	padding-bottom: 3.125rem;
-	min-width: 360px;
+	min-width: 550px;
 }
 
 #box1 {
