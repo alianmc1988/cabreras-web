@@ -43,22 +43,48 @@ export default {
       onMessageChange(value) {
         this.message = value;
       },
-        submitForm(){
-            console.log(this.name)
-            console.log(this.email)
-            console.log(this.message)
-            const requestOptions = {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name: this.name, email: this.email, message: this.message })
-            };
+      submitForm() {
+    // Verificar si algún campo está vacío
+    if (this.name === '' || this.email === '' || this.message === '') {
+        alert('Por favor, preencha todos os campos!');
+        return; // Detener la ejecución si hay campos vacíos
+    }
+    if (!this.email.includes('@') || !this.email.includes('.')) {
+        alert('Por favor, insira um e-mail válido!');
+        return; // Detener la ejecución si el email no es válido
+    }
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-API-Key': 'dev-dennis'
+        },
+        body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            message: this.message
+        })
+    };
 
+    fetch('http://email_contact.cabrerasltd.com', requestOptions)
+        .then(response => {
+            if (response.status === 200) {
+                alert('Formulário enviado com sucesso!');
+                return response.json(); // Convertir respuesta a JSON si es necesario
+            } else {
+                throw new Error('Error al enviar el formulario'); // Manejar errores de HTTP
+            }
+        })
+        .then(data => {
+            // Procesar la respuesta JSON si es necesario
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ocurrió un error al enviar el formulario. Por favor, inténtelo de nuevo.');
+        });
+}
 
-
-            fetch('http://127.0.0.1:8000/api/v0.0.1/cabreras/contacts', requestOptions)
-            .then(response => response.json())
-            .then(data => console.log(data));
-        }
     }
 
 }
